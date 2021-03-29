@@ -1,0 +1,72 @@
+﻿<Window
+    x:Class="HackerRankChalenges.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:HackerRankChalenges"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TextBox">
+                <Setter Property="Margin" Value="2" />
+                <Setter Property="MinWidth" Value="100" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="3" />
+                <Setter Property="Padding" Value="25,5" />
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <UniformGrid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <GroupBox Header="CommonChild">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBox x:Name="TxtCommonChil1" Text="SHINCHAN" />
+                <TextBox
+                    x:Name="TxtCommonChil2"
+                    Grid.Row="1"
+                    Text="NOHARAAA" />
+                <Button
+                    x:Name="BtnCommonnChid"
+                    Grid.Row="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Click="BtnCommonnChid_Click"
+                    Content="Test" />
+
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Beatiful Triplets">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+
+                </Grid.RowDefinitions>
+                <TextBox x:Name="TxtBeatifulTripletsArray" Text="1 6 7 7 8 10 12 13 14 19" />
+                <TextBox
+                    x:Name="TxtBeatifulTripletsDif"
+                    Grid.Row="1"
+                    Text="3" />
+                <Button
+                    x:Name="BtnBeatifulTriplets"
+                    Grid.Row="2"
+                    Click="BtnBeatifulTriplets_Click"
+                    Content="Run" />
+
+            </Grid>
+
+        </GroupBox>
+    </UniformGrid>
+</Window>
