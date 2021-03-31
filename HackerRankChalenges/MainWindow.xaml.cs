@@ -42,8 +42,19 @@ namespace HackerRankChalenges
 
         private static int[] ToIntArray(string s)
         {
-            var stryArr= s.Split(' ');
+            var stryArr = s.Split(' ');
             return Array.ConvertAll(stryArr, Convert.ToInt32);
+        }
+
+        private void BtnMarkAndToys_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MarkAndToys.MaximumToys(ToIntArray(this.TxtMarkAndToysPrices.Text), int.Parse(this.TxtMarkAndToysMoney.Text));
+            MessageBox.Show($"Result:{result}");
+        }
+
+        private void BtnBubbleSort_Click(object sender, RoutedEventArgs e)
+        {
+            BubbleSort.CountSwaps(ToIntArray(this.TxtMarkAndToysPrices.Text));
         }
     }
 }
