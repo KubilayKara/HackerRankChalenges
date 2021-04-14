@@ -40,7 +40,7 @@ namespace HackerRankChalenges.Challanges
             Console.WriteLine($"Array is sorted in {swapCount} swaps.");
             Console.WriteLine($"First Element: {a[0]}");
             Console.WriteLine($"Last Element: {a[a.Length-1]}");
-a
+
         }
         private static void Swap(int[] a, int index1, int index2)
         {

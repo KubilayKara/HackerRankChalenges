@@ -47,13 +47,15 @@
 
                 </Grid>
             </GroupBox>
-            <GroupBox Header="Beatiful Triplets">
+            <GroupBox Header="Dictionaries and Hashmaps">
                 <Grid>
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+
 
                     </Grid.RowDefinitions>
                     <TextBox x:Name="TxtBeatifulTripletsArray" Text="1 6 7 7 8 10 12 13 14 19" />
@@ -65,7 +67,13 @@
                         x:Name="BtnBeatifulTriplets"
                         Grid.Row="2"
                         Click="BtnBeatifulTriplets_Click"
-                        Content="Run" />
+                        Content="Beatiful Triplets" />
+
+                    <Button
+                        x:Name="CountTriplets"
+                        Grid.Row="3"
+                        Click="CountTriplets_Click"
+                        Content="Count Triplets" />
 
                 </Grid>
 
@@ -116,7 +124,56 @@
                         x:Name="BtnBubbleSort"
                         Grid.Row="3"
                         Grid.Column="1"
-                        Content="Bubble Sort" Click="BtnBubbleSort_Click" />
+                        Click="BtnBubbleSort_Click"
+                        Content="Bubble Sort" />
+
+
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="String Operations">
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Content="String1" />
+                    <TextBox
+                        x:Name="TxtStringOp1"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="hello" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Content="String2" />
+                    <TextBox
+                        x:Name="TxtStringOp2"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="word" />
+                    <Button
+                        x:Name="BtnCheckSubString"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Click="BtnCheckSubString_Click"
+                        Content="CheckSubString" />
+                    <Button
+                        x:Name="BtnCheckSpecialStrings"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Content="Check Special Strings" Click="BtnCheckSpecialStrings_Click" />
+
 
 
                 </Grid>

@@ -22,9 +22,4 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\hackerrankchalenges\commonchild.cs">
-      <Filter>Challanges</Filter>
-    </None>
-  </ItemGroup>
 </Project>

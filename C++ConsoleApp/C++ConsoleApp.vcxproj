@@ -141,9 +141,6 @@
   <ItemGroup>
     <ClCompile Include="C++ConsoleApp.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\hackerrankchalenges\commonchild.cs" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
