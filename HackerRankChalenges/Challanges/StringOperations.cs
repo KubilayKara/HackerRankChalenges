@@ -43,7 +43,7 @@ namespace HackerRankChalenges.Challanges
         {
             Dictionary<string, bool> alreadySearched = new Dictionary<string, bool>();
 
-            for (int i = 0; i < text1.Length-1; i++)
+            for (int i = 0; i < text1.Length - 1; i++)
             {
                 string str = text1.Substring(i, 1);
                 if (alreadySearched.ContainsKey(str))
@@ -74,21 +74,55 @@ namespace HackerRankChalenges.Challanges
         }
 
 
+        class CharCount
+        {
+            public int Count { get; set; }
+            public char Char { get; set; }
+            public override string ToString()
+            {
+                return string.Format($"Count: {Count} Char:{Char}");
+            }
+        }
         public static long CountSpecialStrings(string s)
         {
             long result = 0;
-            string currentStr = string.Empty;
-            foreach (char c in s)
+            List<CharCount> list = new List<CharCount>();
+
+            int lastCharCount = 0;
+            char? lastChar = null;
+            foreach (var c in s)
             {
-                currentStr += c;
-                int lastCharCount = LastCharCount(currentStr, c);
-                result += lastCharCount;
-                if (CheckMiddle(currentStr, c, lastCharCount))
-                    result++;
+                if (lastChar == null)
+                {
+                    lastChar = c;
+                    lastCharCount = 1;
+                }
+                else if (lastChar == c)
+                {
+                    lastCharCount++;
+                }
+                else
+                {
+                    list.Add(new CharCount { Char = lastChar.Value, Count = lastCharCount });
+                    lastChar = c;
+                    lastCharCount = 1;
+                }
+            }
+            list.Add(new CharCount { Char = lastChar.Value, Count = lastCharCount });
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                CharCount item = list[i];
+                result += item.Count * (item.Count + 1) / 2;
+                if (list[i].Count == 1 && i > 0 && i + 1 < list.Count && list[i - 1].Char == list[i + 1].Char)
+                {
+                    result += Math.Max(list[i - 1].Count, list[i + 1].Count);
+                }
             }
             return result;
 
         }
+
 
         private static bool CheckMiddle(string s, char c, int lastCharCount)
         {
@@ -97,16 +131,21 @@ namespace HackerRankChalenges.Challanges
             if (middleIndex <= 0)
                 return false;
 
-            for (int i = 1; i <= lastCharCount; i++)
-            {
-                int indexToCheck = middleIndex - i;
-                if (indexToCheck < 0)
-                    return false;
-                if (s[indexToCheck] != c)
-                    return false;
-            }
+            int startIndex = middleIndex - lastCharCount;
+            if (startIndex < 0)
+                return false;
 
-            return true;
+            return s.Substring(startIndex, lastCharCount) == s.Substring(middleIndex + 1, lastCharCount);
+            //for (int i = 1; i <= lastCharCount; i++)
+            //{
+            //    int indexToCheck = middleIndex - i;
+            //    if (indexToCheck < 0)
+            //        return false;
+            //    if (s[indexToCheck] != c)
+            //        return false;
+            //}
+
+            //return true;
 
         }
 
