@@ -22,162 +22,177 @@
         </ResourceDictionary>
     </Window.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <UniformGrid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <ItemsControl
+                x:Name="ChalengeList"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" />
 
-            <GroupBox Header="CommonChild">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <TextBox x:Name="TxtCommonChil1" Text="SHINCHAN" />
-                    <TextBox
-                        x:Name="TxtCommonChil2"
-                        Grid.Row="1"
-                        Text="NOHARAAA" />
-                    <Button
-                        x:Name="BtnCommonnChid"
-                        Grid.Row="2"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Click="BtnCommonnChid_Click"
-                        Content="Test" />
+            <UniformGrid
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
 
-
-                </Grid>
-            </GroupBox>
-            <GroupBox Header="Dictionaries and Hashmaps">
-                <Grid>
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-
-
-                    </Grid.RowDefinitions>
-                    <TextBox x:Name="TxtBeatifulTripletsArray" Text="1 6 7 7 8 10 12 13 14 19" />
-                    <TextBox
-                        x:Name="TxtBeatifulTripletsDif"
-                        Grid.Row="1"
-                        Text="3" />
-                    <Button
-                        x:Name="BtnBeatifulTriplets"
-                        Grid.Row="2"
-                        Click="BtnBeatifulTriplets_Click"
-                        Content="Beatiful Triplets" />
-
-                    <Button
-                        x:Name="CountTriplets"
-                        Grid.Row="3"
-                        Click="CountTriplets_Click"
-                        Content="Count Triplets" />
-
-                </Grid>
-
-            </GroupBox>
+                <GroupBox Header="CommonChild">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBox x:Name="TxtCommonChil1" Text="SHINCHAN" />
+                        <TextBox
+                            x:Name="TxtCommonChil2"
+                            Grid.Row="1"
+                            Text="NOHARAAA" />
+                        <Button
+                            x:Name="BtnCommonnChid"
+                            Grid.Row="2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Click="BtnCommonnChid_Click"
+                            Content="Test" />
 
 
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Dictionaries and Hashmaps">
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
 
 
-            <GroupBox Header="Sort">
-                <Grid>
+                        </Grid.RowDefinitions>
+                        <TextBox x:Name="TxtBeatifulTripletsArray" Text="1 6 7 7 8 10 12 13 14 19" />
+                        <TextBox
+                            x:Name="TxtBeatifulTripletsDif"
+                            Grid.Row="1"
+                            Text="3" />
+                        <Button
+                            x:Name="BtnBeatifulTriplets"
+                            Grid.Row="2"
+                            Click="BtnBeatifulTriplets_Click"
+                            Content="Beatiful Triplets" />
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
+                        <Button
+                            x:Name="CountTriplets"
+                            Grid.Row="3"
+                            Click="CountTriplets_Click"
+                            Content="Count Triplets" />
 
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Content="Prices" />
-                    <TextBox
-                        x:Name="TxtMarkAndToysPrices"
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Text="1 12 5 111 200 1000 10" />
-                    <Label
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        Content="Money" />
-                    <TextBox
-                        x:Name="TxtMarkAndToysMoney"
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Text="50" />
-                    <Button
-                        x:Name="BtnMarkAndToys"
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        Click="BtnMarkAndToys_Click"
-                        Content="Mark And Toys" />
-                    <Button
-                        x:Name="BtnBubbleSort"
-                        Grid.Row="3"
-                        Grid.Column="1"
-                        Click="BtnBubbleSort_Click"
-                        Content="Bubble Sort" />
+                    </Grid>
 
-
-                </Grid>
-            </GroupBox>
-            <GroupBox Header="String Operations">
-                <Grid>
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Content="String1" />
-                    <TextBox
-                        x:Name="TxtStringOp1"
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Text="hello" />
-                    <Label
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        Content="String2" />
-                    <TextBox
-                        x:Name="TxtStringOp2"
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Text="word" />
-                    <Button
-                        x:Name="BtnCheckSubString"
-                        Grid.Row="2"
-                        Grid.Column="0"
-                        Click="BtnCheckSubString_Click"
-                        Content="CheckSubString" />
-                    <Button
-                        x:Name="BtnCheckSpecialStrings"
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        Content="Check Special Strings" Click="BtnCheckSpecialStrings_Click" />
+                </GroupBox>
 
 
 
-                </Grid>
-            </GroupBox>
-        </UniformGrid>
+
+                <GroupBox Header="Sort">
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Content="Prices" />
+                        <TextBox
+                            x:Name="TxtMarkAndToysPrices"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Text="1 12 5 111 200 1000 10" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Content="Money" />
+                        <TextBox
+                            x:Name="TxtMarkAndToysMoney"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="50" />
+                        <Button
+                            x:Name="BtnMarkAndToys"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Click="BtnMarkAndToys_Click"
+                            Content="Mark And Toys" />
+                        <Button
+                            x:Name="BtnBubbleSort"
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Click="BtnBubbleSort_Click"
+                            Content="Bubble Sort" />
+
+
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="String Operations">
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Content="String1" />
+                        <TextBox
+                            x:Name="TxtStringOp1"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Text="hello" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Content="String2" />
+                        <TextBox
+                            x:Name="TxtStringOp2"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="word" />
+                        <Button
+                            x:Name="BtnCheckSubString"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Click="BtnCheckSubString_Click"
+                            Content="CheckSubString" />
+                        <Button
+                            x:Name="BtnCheckSpecialStrings"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Click="BtnCheckSpecialStrings_Click"
+                            Content="Check Special Strings" />
+
+
+
+                    </Grid>
+                </GroupBox>
+            </UniformGrid>
+        </Grid>
     </ScrollViewer>
 </Window>

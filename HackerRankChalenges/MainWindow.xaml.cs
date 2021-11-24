@@ -1,4 +1,5 @@
 ﻿using HackerRankChalenges.Challanges;
+using HackerRankChalenges.Challanges.Strings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,10 @@ namespace HackerRankChalenges
     {
         public MainWindow()
         {
+
             InitializeComponent();
+            this.ChalengeList.Items.Add(new TwoCharacters());
+
         }
 
         private void BtnCommonnChid_Click(object sender, RoutedEventArgs e)
