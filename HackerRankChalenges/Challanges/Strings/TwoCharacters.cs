@@ -11,7 +11,7 @@ namespace HackerRankChalenges.Challanges.Strings
         public override void SetParameters()
         {
             this.url = "https://www.hackerrank.com/challenges/two-characters/problem";
-            this.name = typeof(TwoCharacters).Name;
+            this.ButtonText = typeof(TwoCharacters).Name;
             this.ChalangeParameters = new List<ChalengeParameter> { new ChalengeParameter { Label = "string", DefaultValue = "beabeefeab" } };
         }
         public override string Run(string[] prms)

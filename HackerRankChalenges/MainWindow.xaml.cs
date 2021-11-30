@@ -1,4 +1,5 @@
 ﻿using HackerRankChalenges.Challanges;
+using HackerRankChalenges.Challanges.Interview_Preparation_Kit;
 using HackerRankChalenges.Challanges.Strings;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,8 @@ namespace HackerRankChalenges
 
             InitializeComponent();
             this.ChalengeList.Items.Add(new TwoCharacters());
+            this.ChalengeList.Items.Add(new FibonacciNumbers());
+            this.ChalengeList.Items.Add(new DavisStairCase());
 
         }
 
@@ -88,3 +91,4 @@ namespace HackerRankChalenges
     }
 
 }
+

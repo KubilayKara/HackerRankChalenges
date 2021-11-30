@@ -8,17 +8,10 @@ using System.Windows.Controls;
 
 namespace HackerRankChalenges.Challanges
 {
-    public class ChalengeParameter
-    {
-        public string Label { get; set; }
-        public string DefaultValue { get; set; }
-
-
-    }
     public abstract class Chalange : UserControl
     {
         protected string url;
-        protected string name;
+        protected string ButtonText;
         protected List<ChalengeParameter> ChalangeParameters;
         private List<TextBox> ParametersTextboxes = new List<TextBox>();
 
@@ -41,7 +34,7 @@ namespace HackerRankChalenges.Challanges
             //Button
             Button actionButton = new Button
             {
-                Content = name,
+                Content = ButtonText,
                 Padding = new System.Windows.Thickness(10, 5, 10, 5),
 
             };
