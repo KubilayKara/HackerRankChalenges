@@ -30,6 +30,7 @@ namespace HackerRankChalenges
             this.ChalengeList.Items.Add(new TwoCharacters());
             this.ChalengeList.Items.Add(new FibonacciNumbers());
             this.ChalengeList.Items.Add(new DavisStairCase());
+            this.ChalengeList.Items.Add(new CrossWordPuzzle());
 
         }
 
