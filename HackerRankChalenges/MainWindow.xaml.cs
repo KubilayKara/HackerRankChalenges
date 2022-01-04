@@ -1,5 +1,7 @@
 ﻿using HackerRankChalenges.Challanges;
+using HackerRankChalenges.Challanges.Certificates;
 using HackerRankChalenges.Challanges.Interview_Preparation_Kit;
+using HackerRankChalenges.Challanges.Problem_Solving;
 using HackerRankChalenges.Challanges.Strings;
 using System;
 using System.Collections.Generic;
@@ -31,6 +33,8 @@ namespace HackerRankChalenges
             this.ChalengeList.Items.Add(new FibonacciNumbers());
             this.ChalengeList.Items.Add(new DavisStairCase());
             this.ChalengeList.Items.Add(new CrossWordPuzzle());
+            this.ChalengeList.Items.Add(new ProblemSolving_Intermediate());
+            this.ChalengeList.Items.Add(new DivisibleSumPairs());
 
         }
 
