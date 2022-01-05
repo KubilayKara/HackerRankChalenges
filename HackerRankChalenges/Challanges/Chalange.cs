@@ -102,7 +102,10 @@ namespace HackerRankChalenges.Challanges
 
         public abstract string Run(string[] parameters);
 
-        public abstract void SetParameters();
+        public virtual void SetParameters()
+        {
+            this.ButtonText = this.GetType().Name;
+        }
     }
 }
 

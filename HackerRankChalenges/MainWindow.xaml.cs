@@ -35,6 +35,7 @@ namespace HackerRankChalenges
             this.ChalengeList.Items.Add(new CrossWordPuzzle());
             this.ChalengeList.Items.Add(new ProblemSolving_Intermediate());
             this.ChalengeList.Items.Add(new DivisibleSumPairs());
+            this.ChalengeList.Items.Add(new ExtraLongFactorials());
 
         }
 

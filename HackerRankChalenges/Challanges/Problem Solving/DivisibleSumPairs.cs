@@ -66,5 +66,6 @@ namespace HackerRankChalenges.Challanges.Problem_Solving
 
             return result / 2;
         }
+
     }
 }
