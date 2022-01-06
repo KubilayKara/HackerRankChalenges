@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,14 +18,15 @@ namespace HackerRankChalenges.Challanges.Problem_Solving
         }
         public override string Run(string[] parameters)
         {
+            
             int n = int.Parse(parameters[0]);
             //extraLongFactorials(n);
-            return CalculateFactorials(n).ToString();
+            return CalculateFactorialsUseBigInt(n).ToString();
         }
 
         public static void extraLongFactorials(int n)
         {
-            Console.WriteLine(CalculateFactorials(n));
+            Console.WriteLine(CalculateFactorialsUseBigInt(n));
         }
 
         public static string CalculateFactorials(int n)
@@ -53,6 +55,21 @@ namespace HackerRankChalenges.Challanges.Problem_Solving
                 zeros += "0";
             }
             return $"{result}{zeros}";
+        }
+
+        public static string CalculateFactorialsUseBigInt(int n)
+        {
+            BigInteger result = 1;
+
+            uint number = (uint)n;
+            for (uint i = number; i > 1; i--)
+            {
+               
+                result = result*i;
+            }
+
+
+            return result.ToString();
         }
     }
 }
