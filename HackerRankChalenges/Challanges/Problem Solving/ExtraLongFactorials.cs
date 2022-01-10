@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -18,7 +19,8 @@ namespace HackerRankChalenges.Challanges.Problem_Solving
         }
         public override string Run(string[] parameters)
         {
-            
+
+            Trace.WriteLine($"RUN: {this.GetType().Name}");
             int n = int.Parse(parameters[0]);
             //extraLongFactorials(n);
             return CalculateFactorialsUseBigInt(n).ToString();
@@ -26,7 +28,7 @@ namespace HackerRankChalenges.Challanges.Problem_Solving
 
         public static void extraLongFactorials(int n)
         {
-            Console.WriteLine(CalculateFactorialsUseBigInt(n));
+            Trace.WriteLine(CalculateFactorialsUseBigInt(n));
         }
 
         public static string CalculateFactorials(int n)
