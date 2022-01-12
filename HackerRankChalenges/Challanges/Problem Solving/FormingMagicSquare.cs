@@ -12,21 +12,101 @@ namespace HackerRankChalenges.Challanges.Problem_Solving
         public override void SetParameters()
         {
             this.url = "https://www.hackerrank.com/challenges/magic-square-forming/problem?isFullScreen=true";
-            this.ChalangeParameters = new List<ChalengeParameter> { new ChalengeParameter { Label = "N", DefaultValue = "5" } };
+            this.ChalangeParameters = new List<ChalengeParameter>();// { new ChalengeParameter { Label = "N", DefaultValue = "5" } };
 
             base.SetParameters();
         }
         public override string Run(string[] parameters)
         {
+            List<List<int>> s = new List<List<int>>
+            {
+                new List<int> {4, 9, 2 },
+                new List<int> {3, 5 ,7},
+                new List<int> {8, 1, 5}
+            };
 
-            int n = int.Parse(parameters[0]);
-            var result = ListMagicSquares(3);
-            return string.Empty;
+            var result = formingMagicSquare(s);
+            return result.ToString();
         }
 
         public static int formingMagicSquare(List<List<int>> s)
         {
-            return 0;
+            List<List<List<int>>> magicSquareList = GetMagicSquareList();
+            int[] distanceList = new int[magicSquareList.Count()];
+            for (int squareIndex = 0; squareIndex < magicSquareList.Count(); squareIndex++)
+            {
+                for (int rowIndex = 0; rowIndex < 3; rowIndex++)
+                {
+                    for (int columnIndex = 0; columnIndex < 3; columnIndex++)
+                    {
+                        int distance = magicSquareList[squareIndex][columnIndex][rowIndex] - s[columnIndex][rowIndex];
+                        if (distance < 0)
+                            distance = (-1) * distance;
+                        distanceList[squareIndex] += distance;
+                    }
+                }
+            }
+            int? minDistance = null;
+            foreach (var item in distanceList)
+            {
+                if (minDistance == null || minDistance.Value > item)
+                    minDistance = item;
+            }
+            return minDistance.Value;
+        }
+
+        private static List<List<List<int>>> GetMagicSquareList()
+        {
+            List<List<List<int>>> magicSquareList = new List<List<List<int>>>()
+            { new List<List<int>>
+            {
+                 new List<int> { 2  , 7,   6 },
+                 new List<int> { 9  , 5,   1 },
+                 new List<int>{ 4  , 3,   8 }
+             },
+            new List<List<int>>
+            {
+                 new List<int> {  2 ,  9,   4 },
+                 new List<int> {   7   ,5 ,  3 },
+                 new List<int> { 6,   1  , 8 }
+            },
+            new List<List<int>>
+            {
+                new List<int> {4 ,  3,   8},
+                new List<int> {9,   5 ,  1},
+                new List<int> {2 ,  7 ,  6}
+            },
+            new List<List<int>>
+            {
+                new List<int> {4,   9  , 2},
+                new List<int> { 3 ,  5  , 7},
+                new List<int> {8  , 1 ,  6}
+            },
+            new List<List<int>>
+            {
+                new List<int> {6 ,  1,   8},
+                new List<int> {7 ,  5  , 3},
+                new List<int> {2 ,  9,   4}
+            },
+            new List<List<int>>
+            {
+                new List<int> {6 ,  7   ,2},
+                new List<int> {1  , 5 ,  9},
+                new List<int> {8  , 3 ,  4}
+            },
+            new List<List<int>>
+            {
+                new List<int> {8,   1 ,  6},
+                new List<int> { 3,   5 ,  7},
+                new List<int> {4 ,  9 ,  2}
+            },
+            new List<List<int>>
+            {
+                new List<int> {8,   3,   4},
+                new List<int> {1,   5,   9},
+                new List<int> { 6,   7 ,  2}
+            } };
+            return magicSquareList;
         }
 
         public static List<int[,]> ListMagicSquares(int n)
@@ -50,7 +130,7 @@ namespace HackerRankChalenges.Challanges.Problem_Solving
                 {
                     s.NumberUsage[index] = true;
                     s.Numbers[curentRow, currentCloumn] = index + 1;
-                    
+
                     if (s.IsValid())
                     {
                         int nextColumn = (currentCloumn + 1 < s.Length) ? currentCloumn + 1 : 0;
