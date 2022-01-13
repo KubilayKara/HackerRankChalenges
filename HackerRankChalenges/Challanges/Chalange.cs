@@ -106,6 +106,9 @@ namespace HackerRankChalenges.Challanges
         {
             this.ButtonText = this.GetType().Name;
         }
+
+
+
     }
 }
 
