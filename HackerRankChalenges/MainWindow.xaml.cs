@@ -1,6 +1,7 @@
 ﻿using HackerRankChalenges.Challanges;
 using HackerRankChalenges.Challanges.Certificates;
 using HackerRankChalenges.Challanges.Interview_Preparation_Kit;
+using HackerRankChalenges.Challanges.LeetCode75;
 using HackerRankChalenges.Challanges.Problem_Solving;
 using HackerRankChalenges.Challanges.Strings;
 using System;
@@ -39,6 +40,9 @@ namespace HackerRankChalenges
             this.ChalengeList.Items.Add(new FormingMagicSquare());
             this.ChalengeList.Items.Add(new Siemens());
             this.ChalengeList.Items.Add(new PicingNumbers());
+            this.ChalengeList.Items.Add(new TwoSum());
+            this.ChalengeList.Items.Add(new ProductExceptSelf());
+            this.ChalengeList.Items.Add(new MaxSubArray());
 
         }
 
@@ -100,4 +104,5 @@ namespace HackerRankChalenges
     }
 
 }
+
 

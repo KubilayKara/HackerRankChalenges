@@ -11,30 +11,32 @@ namespace HackerRankChalenges.Challanges
         public override void SetParameters()
         {
             this.url = "";
-            this.ChalangeParameters = new List<ChalengeParameter>();
+            this.ChalangeParameters = new List<ChalengeParameter> { new ChalengeParameter { Label = "Parameter", DefaultValue = "13" } };
             this.ButtonText = typeof(Siemens).Name;
         }
         public override string Run(string[] parameters)
         {
 
-            int[] test_ = new int[] { 0, 1, 2, 3, 3 };
-            int[] test = new int[] { 1, 2, 3, 3, 4 };
-            var result = solution(test, 4);
+            //int[] test_ = new int[] { 0, 1, 2, 3, 3 };
+            //int[] test = new int[] { 1, 2, 3, 3, 4 };
+            //var result = solution(test, 4);
 
 
 
-            var result_2 = solution2_Edip("011100");
-            var result_2_1 = solution_2("");
+            //var result_2 = solution2_1("011100");
+            //var result_2_1 = solution_2("");
 
-            string manyOnes = string.Empty;
-            for (int i = 0; i < 400000; i++)
-            {
-                manyOnes += "1";
-            }
-            var result_2_2 = solution_2(manyOnes);
+            //string manyOnes = string.Empty;
+            //for (int i = 0; i < 400000; i++)
+            //{
+            //    manyOnes += "1";
+            //}
+            //var result_2_2 = solution_2(manyOnes);
+
+            var result3 = solution_3(parameters[0]);
 
 
-            return result.ToString();
+            return result3.ToString();
 
         }
 
@@ -99,7 +101,7 @@ namespace HackerRankChalenges.Challanges
 
 
 
-        public int solution2_Edip(string s)
+        public int solution2_1(string s)
         {
             s = s.TrimStart('0');
             int countOfOnes = 0;
@@ -127,19 +129,40 @@ namespace HackerRankChalenges.Challanges
             {
                 total += s[i] - 48;
             }
-            if (total % 3 == 0) ++count;
+            if (total % 3 == 0)
+                ++count;
+            //for (int i = 0; i < s.Length; ++i)
+            //{
+
+            //    int remTot = total - (s[i] - 48);
+
+            //    for (int k = 0; k <= 9; ++k)
+            //    {
+            //        if ((remTot + k) % 3 == 0
+            //                && k != s[i] - 48)
+            //        {
+            //            ++count;
+            //        }
+            //    }
+            //}
             for (int i = 0; i < s.Length; ++i)
             {
-                int remTot = total - (s[i] - 48);
+                int cur = s[i] - 48;
+                int remTot = total - cur;
 
-                for (int k = 0; k <= 9; ++k)
+                switch (remTot % 3)
                 {
-                    if ((remTot + k) % 3 == 0
-                            && k != s[i] - 48)
-                    {
-                        ++count;
-                    }
+                    case 0:
+                        count += (cur % 3 == 0) ? 3 : 4;
+                        break;
+                    case 1:
+                        count += (cur % 3 == 2) ? 2 : 3;
+                        break;
+                    case 2:
+                        count += (cur % 3 == 1) ? 2 : 3;
+                        break;
                 }
+
             }
             return count;
         }
