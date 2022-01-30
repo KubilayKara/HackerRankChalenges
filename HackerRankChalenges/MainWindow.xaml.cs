@@ -1,5 +1,6 @@
 ﻿using HackerRankChalenges.Challanges;
 using HackerRankChalenges.Challanges.Certificates;
+using HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndString;
 using HackerRankChalenges.Challanges.Interview_Preparation_Kit;
 using HackerRankChalenges.Challanges.LeetCode75;
 using HackerRankChalenges.Challanges.Problem_Solving;
@@ -43,6 +44,15 @@ namespace HackerRankChalenges
             this.ChalengeList.Items.Add(new TwoSum());
             this.ChalengeList.Items.Add(new ProductExceptSelf());
             this.ChalengeList.Items.Add(new MaxSubArray());
+
+            //CrackingTheCoreInterViewList
+            this.CrackingTheCoreInterViewList.Items.Add(new IsUnique());
+            this.CrackingTheCoreInterViewList.Items.Add(new CheckPermutation());
+            this.CrackingTheCoreInterViewList.Items.Add(new URLify());
+            this.CrackingTheCoreInterViewList.Items.Add(new PalindromePermutation());
+            this.CrackingTheCoreInterViewList.Items.Add(new OneWay());
+            this.CrackingTheCoreInterViewList.Items.Add(new StringCompression());
+            this.CrackingTheCoreInterViewList.Items.Add(new RotateMatrix());
 
         }
 
@@ -104,5 +114,6 @@ namespace HackerRankChalenges
     }
 
 }
+
 
 

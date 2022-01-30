@@ -20,7 +20,7 @@ namespace HackerRankChalenges.Challanges.LeetCode75
             //return Utility.IntagerArrayToString(result);
 
             //var result = MaxSubArray(nums);
-            var result = MaxSubArray_EdgeDetection(nums);
+            var result = ProductExceptSelf_solution(nums);
             return result.ToString();
 
 
