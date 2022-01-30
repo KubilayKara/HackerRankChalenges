@@ -53,6 +53,7 @@ namespace HackerRankChalenges
             this.CrackingTheCoreInterViewList.Items.Add(new OneWay());
             this.CrackingTheCoreInterViewList.Items.Add(new StringCompression());
             this.CrackingTheCoreInterViewList.Items.Add(new RotateMatrix());
+            this.CrackingTheCoreInterViewList.Items.Add(new ZeroMatrix());
 
         }
 
@@ -94,7 +95,7 @@ namespace HackerRankChalenges
 
         private void BtnCheckSubString_Click(object sender, RoutedEventArgs e)
         {
-            bool value= StringOperations.CheckCommonSubString(this.TxtStringOp1.Text, this.TxtStringOp2.Text);
+            bool value = StringOperations.CheckCommonSubString(this.TxtStringOp1.Text, this.TxtStringOp2.Text);
             MessageBox.Show($"Result:{value}");
         }
 
@@ -103,7 +104,8 @@ namespace HackerRankChalenges
             long[] arr = ToLongArray(this.TxtBeatifulTripletsArray.Text);
             int dif = int.Parse(this.TxtBeatifulTripletsDif.Text);
 
-            MessageBox.Show($"Result:{DictionariesAndHashmaps.CountTriplets( arr.ToList(),dif)}");        }
+            MessageBox.Show($"Result:{DictionariesAndHashmaps.CountTriplets(arr.ToList(), dif)}");
+        }
 
         private void BtnCheckSpecialStrings_Click(object sender, RoutedEventArgs e)
         {

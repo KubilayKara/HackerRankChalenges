@@ -22,7 +22,7 @@ namespace HackerRankChalenges.Challanges.LeetCode75
             var result = Sollution(nums, target);
 
 
-            return Utility.IntagerArrayToString(result);
+            return Utility.ArrayToString(result);
 
         }
 

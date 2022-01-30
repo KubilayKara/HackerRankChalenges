@@ -21,22 +21,46 @@ namespace HackerRankChalenges
             }
             return a;
         }
-     
 
-        public static string IntagerArrayToString(int[] arr, char seperator = ',')
+
+        public static string ArrayToString<T>(T[] arr, char seperator = ' ')
         {
             if (arr == null)
                 return string.Empty;
-            string result=string.Empty;
+            string result = string.Empty;
             for (int i = 0; i < arr.Length - 1; i++)
             {
-                int item = arr[i];
+                T item = arr[i];
                 result += item.ToString() + seperator;
             }
             result += arr.LastOrDefault();
 
             return result;
         }
+
+        public static string MatrixToString<T>(T[,] arr, char seperator = ' ')
+        {
+            if (arr == null)
+                return string.Empty;
+            string result = string.Empty;
+            int rowCount = arr.GetLength(0);
+            int columnCount = arr.GetLength(1);
+
+            for (int rowIndex = 0; rowIndex < rowCount; rowIndex++)
+            {
+                for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
+                {
+                        result += arr[rowIndex, columnIndex].ToString();
+                    if (columnIndex != columnCount - 1)
+                        result += seperator;
+                }
+                if (rowIndex != rowCount - 1)
+                    result += "\n";
+            }
+
+            return result;
+        }
+
 
     }
 }

@@ -12,7 +12,7 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
         public override void SetParameters()
         {
             this.url = "";
-            this.ChalangeParameters = new List<ChalengeParameter> { new ChalengeParameter { Label = "String 1", DefaultValue = "aabcccccaaa" } };
+            this.ChalangeParameters = new List<ChalengeParameter> { };
             base.SetParameters();
 
         }
@@ -28,7 +28,7 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
 
             var result = RotateMatrix_solution(matrix);
 
-            return result.ToString();
+            return Utility.MatrixToString(result);
 
         }
 
@@ -39,18 +39,15 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
             int columnCount = matrix.GetLength(1);
             int rowCount = matrix.GetLength(0);
             char[,] result = new char[columnCount, rowCount];
-            for (int ColumnIndex = 0; ColumnIndex < columnCount; ColumnIndex++)
+            for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
             {
                 for (int rowIndex = 0; rowIndex < rowCount; rowIndex++)
                 {
-                    result[columnCount - ColumnIndex - 1, rowIndex] = matrix[rowIndex, ColumnIndex];
+                    result[columnCount - columnIndex - 1, rowIndex] = matrix[rowIndex, columnIndex];
                 }
             }
             return result;
         }
-
-
-
-
     }
 }
+
