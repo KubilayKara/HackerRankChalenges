@@ -12,7 +12,7 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
     internal class IsUnique : Chalange
     {
         /*
-           Is Unique: Implement an algorithm to determine if a string has all unique characters. 
+          Is Unique: Implement an algorithm to determine if a string has all unique characters. 
           What if you cannot use additional data structures?
           */
 
@@ -38,6 +38,7 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
             Dictionary<Char, int> charDict = new Dictionary<char, int>();
             foreach (char c in v)
             {
+
                 if (charDict.ContainsKey(c))
                     return false;
 

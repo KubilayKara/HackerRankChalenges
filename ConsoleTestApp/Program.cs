@@ -25,9 +25,26 @@ namespace ConsoleTestApp
 
             //File f = new File();
 
+            (int a, string b) = DoSomething();
+            Console.WriteLine($"{a}-{b}");
         }
 
 
+        public static (int age, string name) DoSomething()
+        {
+            (int age, string name) t = (15, "haydar");
+
+            return (t);
+            //return (5, "hamze");
+        }
+        public static void DoSomething(out int age, out string name)
+        {
+            //(int age, string name) t = (15, "haydar");
+            age = 5;
+            name = "haydar";
+            return ;
+            //return (5, "hamze");
+        }
     }
 
     struct Point

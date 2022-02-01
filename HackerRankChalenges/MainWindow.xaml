@@ -28,11 +28,17 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <GroupBox Header="Chalenges" 
-                      Background="AliceBlue"
-                      MinHeight="60">
+            <GroupBox  Grid.Row="0" 
+                       BorderBrush="Coral" BorderThickness="2"
+                      MinHeight="60"
+                      Background="LightCoral">
+                <GroupBox.Header>
+                    <Label Content="Cracking The Code Interview" Background="Wheat" Margin="-2" BorderBrush="Coral" BorderThickness="2" >
+
+                    </Label>
+                </GroupBox.Header>
                 <ItemsControl
-                x:Name="ChalengeList"
+                x:Name="CrackingTheCoreInterViewList"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
                     <ItemsControl.ItemsPanel>
@@ -42,11 +48,12 @@
                     </ItemsControl.ItemsPanel>
                 </ItemsControl>
             </GroupBox>
-            <GroupBox Header="Cracking The Code Interview" Grid.Row="1" 
-                      MinHeight="60"
-                      Background="LightCoral">
+
+            <GroupBox Header="Chalenges"  Grid.Row="1"
+                      Background="AliceBlue"
+                      MinHeight="60">
                 <ItemsControl
-                x:Name="CrackingTheCoreInterViewList"
+                x:Name="ChalengeList"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
                     <ItemsControl.ItemsPanel>

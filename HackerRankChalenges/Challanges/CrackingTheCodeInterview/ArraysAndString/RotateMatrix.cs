@@ -18,11 +18,10 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
         }
         public override string Run(string[] parameters)
         {
-            char[,] matrix = new char[,] {
-            {'a','b' },
-            {'c','d' },
-            {'e','f' }
-
+            string[,] matrix = new string[,] {
+            {"a","b" },
+            {"c","d" },
+            {"e","f" }
             };
 
 
@@ -32,13 +31,13 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
 
         }
 
-        private char[,] RotateMatrix_solution(char[,] matrix)
+        private T[,] RotateMatrix_solution<T>(T[,] matrix)
         {
             //rotate right or left?
 
             int columnCount = matrix.GetLength(1);
             int rowCount = matrix.GetLength(0);
-            char[,] result = new char[columnCount, rowCount];
+            T[,] result = new T[columnCount, rowCount];
             for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
             {
                 for (int rowIndex = 0; rowIndex < rowCount; rowIndex++)

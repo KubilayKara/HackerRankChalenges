@@ -63,17 +63,47 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
 
             Dictionary<char, int> charDic = new Dictionary<char, int>();
 
-            foreach (char c in s1)
+            for (int i = 0; i < s1.Length; i++)
             {
-                if (!charDic.ContainsKey(c))
-                    charDic[c] = 0;
-                charDic[c]++;
+                char c1 = s1[i];
+                if (!charDic.ContainsKey(c1))
+                    charDic[c1] = 0;
+                charDic[c1]++;
             }
-            foreach (char c in s2)
+            for (int i = 0; i < s2.Length; i++)
             {
-                if (!charDic.ContainsKey(c) || charDic[c] == 0)
+                char c2 = s2[i];
+                if (!charDic.ContainsKey(c2) || charDic[c2] == 0)
                     return false;
-                charDic[c]--;
+                charDic[c2]--;
+            }
+            return true;
+        }
+        private bool IsPermutation_3(string s1, string s2)
+        {
+            if (s1.Length != s2.Length)
+                return false;
+
+            Dictionary<char, int> charDic = new Dictionary<char, int>();
+
+            for (int i = 0; i < s1.Length; i++)
+            {
+                char c1 = s1[i];
+                if (!charDic.ContainsKey(c1))
+                    charDic[c1] = 0;
+                charDic[c1]++;
+
+                char c2 = s2[i];
+                if (!charDic.ContainsKey(c1))
+                    charDic[c2] = 0;
+                charDic[c2]--;
+            }
+
+            
+            foreach (var item in charDic)
+            {
+                if (item.Value != 0)
+                    return false;
             }
             return true;
         }

@@ -1,6 +1,7 @@
 ﻿using HackerRankChalenges.Challanges;
 using HackerRankChalenges.Challanges.Certificates;
 using HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndString;
+using HackerRankChalenges.Challanges.CrackingTheCodeInterview.LinkedLists;
 using HackerRankChalenges.Challanges.Interview_Preparation_Kit;
 using HackerRankChalenges.Challanges.LeetCode75;
 using HackerRankChalenges.Challanges.Problem_Solving;
@@ -54,6 +55,11 @@ namespace HackerRankChalenges
             this.CrackingTheCoreInterViewList.Items.Add(new StringCompression());
             this.CrackingTheCoreInterViewList.Items.Add(new RotateMatrix());
             this.CrackingTheCoreInterViewList.Items.Add(new ZeroMatrix());
+            this.CrackingTheCoreInterViewList.Items.Add(new StringRotation ());
+            //LinkedLists            
+            this.CrackingTheCoreInterViewList.Items.Add(new RemoveDuplicates());
+
+
 
         }
 

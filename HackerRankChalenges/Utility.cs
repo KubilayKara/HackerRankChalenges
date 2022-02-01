@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HackerRankChalenges.Challanges.CrackingTheCodeInterview.LinkedLists;
 
 namespace HackerRankChalenges
 {
@@ -59,6 +60,20 @@ namespace HackerRankChalenges
             }
 
             return result;
+        }
+
+        public static KubLinkedList<T> ArrayToLinkedList<T>(T[] array)
+        {
+            KubLinkedList<T> linkedlist = new KubLinkedList<T>(array[0]);
+
+            KubLinkedListNode<T> currentNode = linkedlist.Head;
+            for (int i = 1; i < array.Length; i++)
+            {
+                var newNode = new KubLinkedListNode<T>(array[i]);
+                currentNode.NextNode = newNode;
+                currentNode = newNode;
+            }
+            return linkedlist;
         }
 
 

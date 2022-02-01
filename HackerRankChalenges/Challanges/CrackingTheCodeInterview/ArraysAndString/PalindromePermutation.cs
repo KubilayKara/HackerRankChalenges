@@ -35,7 +35,9 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
         private bool PalindromePermutation_solution(string s)
         {
             //empth spaces are not important
-            Dictionary<char, int> charDict = new Dictionary<char, int>();
+            Dictionary<char, bool> charDict = new Dictionary<char, bool>();
+
+            //bool[] 
 
             foreach (var c in s)
             {
@@ -43,7 +45,7 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
                     continue;
 
                 if (!charDict.ContainsKey(c))
-                    charDict[c] = 1;
+                    charDict[c] = true;
                 else
                     charDict.Remove(c);
             }
