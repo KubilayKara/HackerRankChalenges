@@ -64,6 +64,9 @@ namespace HackerRankChalenges
 
         public static KubLinkedList<T> ArrayToLinkedList<T>(T[] array)
         {
+            if (array.Length == 0)
+                return new KubLinkedList<T>(default(T));
+
             KubLinkedList<T> linkedlist = new KubLinkedList<T>(array[0]);
 
             KubLinkedListNode<T> currentNode = linkedlist.Head;

@@ -27,15 +27,10 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
         }
         public override string Run(string[] parameters)
         {
-
-
-
             //is case sensitive?
             var result = OneWay_solution(parameters[0], parameters[1]);
 
             return result.ToString();
-
-
         }
 
         private bool OneWay_solution(string s1, string s2)

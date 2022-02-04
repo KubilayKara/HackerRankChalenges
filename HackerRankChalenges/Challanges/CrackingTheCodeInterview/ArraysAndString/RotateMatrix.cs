@@ -19,15 +19,16 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
         public override string Run(string[] parameters)
         {
             string[,] matrix = new string[,] {
-            {"a","b" },
-            {"c","d" },
-            {"e","f" }
+            {"00","01","02","03" },
+            {"10","11","12","13" },
+            {"20","21","22","23" },
+            {"30","31","32","33" },
+            {"40","41","42","43" }
             };
-
 
             var result = RotateMatrix_solution(matrix);
 
-            return Utility.MatrixToString(result);
+            return "\n" + Utility.MatrixToString(result);
 
         }
 
@@ -43,6 +44,7 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
                 for (int rowIndex = 0; rowIndex < rowCount; rowIndex++)
                 {
                     result[columnCount - columnIndex - 1, rowIndex] = matrix[rowIndex, columnIndex];
+                    //result[columnCount, rowCount - rowIndex - 1] = matrix[rowIndex, columnIndex];
                 }
             }
             return result;

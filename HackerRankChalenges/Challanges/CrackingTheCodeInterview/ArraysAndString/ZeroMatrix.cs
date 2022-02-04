@@ -4,9 +4,8 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
 {
     internal class ZeroMatrix : Chalange
     {
-        /*
-               Zero Matrix: Write an algorithm such that if an element in an MxN matrix is 0, its entire row and
-               column are set to 0.
+        /*  Zero Matrix: Write an algorithm such that if an element in an MxN matrix is 0, its entire row and
+            column are set to 0.
           */
 
         public override void SetParameters()
@@ -58,6 +57,7 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndStrin
         {
             int columnCount = matrix.GetLength(1);
             int rowCount = matrix.GetLength(0);
+
             zeroColumns = new bool[columnCount];
             zeroRows = new bool[rowCount];
             int zeroRowCount = 0; int zeroColumntCount = 0;

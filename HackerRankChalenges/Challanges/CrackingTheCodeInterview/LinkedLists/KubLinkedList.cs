@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Text;
 
 namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.LinkedLists
 {
@@ -30,6 +31,10 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.LinkedLists
 
     public class KubLinkedList<T1> : KubLinkedList<T1, KubLinkedListNode<T1>>
     {
+        public KubLinkedList()
+        {
+        }
+
         public KubLinkedList(T1 headLoad) : base(headLoad)
         {
 
@@ -59,7 +64,6 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.LinkedLists
             return this.PayLoad.ToString();
         }
     }
-
     public class DoubleKubLinkedListNode<T> : KubLinkedListNode<T>
     {
         public DoubleKubLinkedListNode(T payload) : base(payload)
@@ -68,4 +72,6 @@ namespace HackerRankChalenges.Challanges.CrackingTheCodeInterview.LinkedLists
 
         public KubLinkedListNode<T> PreviousNode { get; set; }
     }
+
+    
 }
