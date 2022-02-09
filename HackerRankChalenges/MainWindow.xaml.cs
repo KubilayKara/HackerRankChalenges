@@ -62,6 +62,9 @@ namespace HackerRankChalenges
             this.CrackingTheCoreInterViewList.Items.Add(new DeleteMiddleNode());
             this.CrackingTheCoreInterViewList.Items.Add(new Partition());
             this.CrackingTheCoreInterViewList.Items.Add(new SumLists());
+            this.CrackingTheCoreInterViewList.Items.Add(new LinkedListPalindrome());
+            this.CrackingTheCoreInterViewList.Items.Add(new LinkedListIntersection());
+
 
 
 

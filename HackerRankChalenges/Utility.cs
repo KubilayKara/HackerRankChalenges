@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,7 +52,7 @@ namespace HackerRankChalenges
             {
                 for (int columnIndex = 0; columnIndex < columnCount; columnIndex++)
                 {
-                        result += arr[rowIndex, columnIndex].ToString();
+                    result += arr[rowIndex, columnIndex].ToString();
                     if (columnIndex != columnCount - 1)
                         result += seperator;
                 }
@@ -77,6 +78,19 @@ namespace HackerRankChalenges
                 currentNode = newNode;
             }
             return linkedlist;
+        }
+
+        public static (TimeSpan duration, T functionResult) RunAndReturnDuration<T>(Func<T> func)
+        {
+            DateTime d = DateTime.Now;
+            var fResult = func.Invoke();
+            return (DateTime.Now - d, fResult);
+        }
+
+        public static TimeSpan RunAndReturnDuration<T>(Action action)
+        {
+            DateTime d = DateTime.Now;
+            return (DateTime.Now - d);
         }
 
 
