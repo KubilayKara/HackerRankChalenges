@@ -1,4 +1,5 @@
 ﻿using HackerRankChalenges.Challanges;
+using HackerRankChalenges.Challanges.Amazon;
 using HackerRankChalenges.Challanges.Certificates;
 using HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndString;
 using HackerRankChalenges.Challanges.CrackingTheCodeInterview.LinkedLists;
@@ -45,6 +46,10 @@ namespace HackerRankChalenges
             this.ChalengeList.Items.Add(new TwoSum());
             this.ChalengeList.Items.Add(new ProductExceptSelf());
             this.ChalengeList.Items.Add(new MaxSubArray());
+            this.ChalengeList.Items.Add(new AmazonSession1Q1());
+            this.ChalengeList.Items.Add(new AmazonSession1Q2());
+
+
 
             //CrackingTheCoreInterViewList
             this.CrackingTheCoreInterViewList.Items.Add(new IsUnique());
@@ -64,6 +69,7 @@ namespace HackerRankChalenges
             this.CrackingTheCoreInterViewList.Items.Add(new SumLists());
             this.CrackingTheCoreInterViewList.Items.Add(new LinkedListPalindrome());
             this.CrackingTheCoreInterViewList.Items.Add(new LinkedListIntersection());
+            this.CrackingTheCoreInterViewList.Items.Add(new LoopDetection());
 
 
 
