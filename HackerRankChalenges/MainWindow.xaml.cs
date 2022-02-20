@@ -3,8 +3,10 @@ using HackerRankChalenges.Challanges.Amazon;
 using HackerRankChalenges.Challanges.Certificates;
 using HackerRankChalenges.Challanges.CrackingTheCodeInterview.ArraysAndString;
 using HackerRankChalenges.Challanges.CrackingTheCodeInterview.LinkedLists;
+using HackerRankChalenges.Challanges.CrackingTheCodeInterview.RecurisonAndDynamicProgramming;
 using HackerRankChalenges.Challanges.Interview_Preparation_Kit;
 using HackerRankChalenges.Challanges.LeetCode75;
+using HackerRankChalenges.Challanges.LeetCodeAlgo1;
 using HackerRankChalenges.Challanges.Problem_Solving;
 using HackerRankChalenges.Challanges.Strings;
 using System;
@@ -48,6 +50,9 @@ namespace HackerRankChalenges
             this.ChalengeList.Items.Add(new MaxSubArray());
             this.ChalengeList.Items.Add(new AmazonSession1Q1());
             this.ChalengeList.Items.Add(new AmazonSession1Q2());
+            this.ChalengeList.Items.Add(new BinarySearch());
+            this.ChalengeList.Items.Add(new LeetFirstBadVersion());
+
 
 
 
@@ -70,6 +75,9 @@ namespace HackerRankChalenges
             this.CrackingTheCoreInterViewList.Items.Add(new LinkedListPalindrome());
             this.CrackingTheCoreInterViewList.Items.Add(new LinkedListIntersection());
             this.CrackingTheCoreInterViewList.Items.Add(new LoopDetection());
+            //RecurisonAndDynamicProgramming            
+            this.CrackingTheCoreInterViewList.Items.Add(new TripleStep());
+
 
 
 
