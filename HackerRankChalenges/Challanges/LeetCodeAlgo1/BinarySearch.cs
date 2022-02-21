@@ -46,5 +46,8 @@ namespace HackerRankChalenges.Challanges.LeetCodeAlgo1
             return Search(nums, target, start, mid - 1);
 
         }
+
+       
+
     }
 }

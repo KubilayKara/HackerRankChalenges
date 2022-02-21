@@ -20,7 +20,6 @@ namespace HackerRankChalenges.Challanges.Certificates
             /*
              * 4
                 3
-
                 2
                 1
                 1

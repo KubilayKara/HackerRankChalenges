@@ -52,6 +52,9 @@ namespace HackerRankChalenges
             this.ChalengeList.Items.Add(new AmazonSession1Q2());
             this.ChalengeList.Items.Add(new BinarySearch());
             this.ChalengeList.Items.Add(new LeetFirstBadVersion());
+            this.ChalengeList.Items.Add(new LeetSortedSquares());
+            this.ChalengeList.Items.Add(new LeetRotateArray());
+
 
 
 
