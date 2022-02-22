@@ -58,6 +58,21 @@ namespace HackerRankChalenges.Challanges.LeetCodeAlgo1
 
         }
 
+
+        public void MoveZeroes(int[] nums)
+        {
+            int insertIndex = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int val = nums[i];
+                if (val != 0)
+                    nums[insertIndex++] = val;
+            }
+            for (int i = insertIndex; i < nums.Length; i++)
+            {
+                nums[insertIndex++] = 0;
+            }
+        }
     }
 }
 

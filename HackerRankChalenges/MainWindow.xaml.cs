@@ -54,6 +54,8 @@ namespace HackerRankChalenges
             this.ChalengeList.Items.Add(new LeetFirstBadVersion());
             this.ChalengeList.Items.Add(new LeetSortedSquares());
             this.ChalengeList.Items.Add(new LeetRotateArray());
+            this.ChalengeList.Items.Add(new LeetTwoSum());
+
 
 
 
