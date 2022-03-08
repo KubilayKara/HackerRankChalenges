@@ -87,9 +87,11 @@ namespace HackerRankChalenges
             return (DateTime.Now - d, fResult);
         }
 
-        public static TimeSpan RunAndReturnDuration<T>(Action action)
+        public static TimeSpan RunAndReturnDuration(Action action)
         {
             DateTime d = DateTime.Now;
+
+            action.Invoke();
             return (DateTime.Now - d);
         }
 

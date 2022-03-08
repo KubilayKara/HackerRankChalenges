@@ -24,11 +24,12 @@ namespace HackerRankChalenges.Challanges.LeetCodeAlgo1
         {
             //value,index
             Dictionary<int, int> numDic = new Dictionary<int, int>();
+            int smallest=numbers[0];
 
             for (int i = 0; i < numbers.Length; i++)
             {
                 int currentNum = numbers[i];
-                if (currentNum >= target)
+                if (currentNum+smallest >= target)
                     break;
                 int otherNum = target - currentNum;
 
@@ -40,6 +41,28 @@ namespace HackerRankChalenges.Challanges.LeetCodeAlgo1
             return null;
 
 
+        }
+        public int[] TwoSum_2(int[] numbers, int target)
+        {
+            int smallIndex = 0;
+            int bigIndex = numbers.Length - 1;
+
+            while (smallIndex != bigIndex)
+            {
+                if (numbers[smallIndex] + numbers[bigIndex] == target)
+                {
+                    return new int[] { smallIndex + 1, bigIndex + 1 };
+                }
+                else if (numbers[smallIndex] + numbers[bigIndex] > target)
+                {
+                    bigIndex--;
+                }
+                else if (numbers[smallIndex] + numbers[bigIndex] < target)
+                {
+                    smallIndex++;
+                }
+            }
+            return new int[] { smallIndex, bigIndex };
         }
     }
 }
