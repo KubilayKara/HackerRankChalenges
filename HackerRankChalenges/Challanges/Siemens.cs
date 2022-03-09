@@ -43,8 +43,7 @@ namespace HackerRankChalenges.Challanges
                 if (!dic.ContainsKey(a))
                     dic[a] = new Dictionary<int, bool>();
 
-                var result = dic[a];
-                   result [b] = true;
+                dic[a][b] = true;
 
                 if (!dic.ContainsKey(b))
                     dic[b] = new Dictionary<int, bool>();
