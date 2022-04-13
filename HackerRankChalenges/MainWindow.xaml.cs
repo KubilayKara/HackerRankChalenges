@@ -6,6 +6,7 @@ using HackerRankChalenges.Challanges.CrackingTheCodeInterview.LinkedLists;
 using HackerRankChalenges.Challanges.CrackingTheCodeInterview.RecurisonAndDynamicProgramming;
 using HackerRankChalenges.Challanges.Interview_Preparation_Kit;
 using HackerRankChalenges.Challanges.LeetCode75;
+using HackerRankChalenges.Challanges.LeetCode75.Binary;
 using HackerRankChalenges.Challanges.LeetCode75.Dynamic_Programming;
 using HackerRankChalenges.Challanges.LeetCode75.Graph;
 using HackerRankChalenges.Challanges.LeetCodeAlgo1;
@@ -37,6 +38,7 @@ namespace HackerRankChalenges
         {
 
             InitializeComponent();
+            this.ChalengeList.Items.Add(new LeetSumOfTwoIntagers());
             this.ChalengeList.Items.Add(new LeetCloneGraph());
             this.ChalengeList.Items.Add(new LeetCoinChange());
             this.ChalengeList.Items.Add(new LeetFirstBadVersion());

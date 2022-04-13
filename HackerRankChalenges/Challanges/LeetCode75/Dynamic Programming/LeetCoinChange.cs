@@ -21,7 +21,7 @@ namespace HackerRankChalenges.Challanges.LeetCode75.Dynamic_Programming
         {
             int[] coins = Utility.StringToIntagerList(parameters[0]).ToArray();
             int amount = int.Parse(parameters[1]);
-            this._cache = new Dictionary<int, int>();
+            //this._cache = new Dictionary<int, int>();
             return CoinChange(coins, amount).ToString();
         }
 
