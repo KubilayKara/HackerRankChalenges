@@ -7,6 +7,7 @@ using HackerRankChalenges.Challanges.CrackingTheCodeInterview.RecurisonAndDynami
 using HackerRankChalenges.Challanges.Interview_Preparation_Kit;
 using HackerRankChalenges.Challanges.LeetCode75;
 using HackerRankChalenges.Challanges.LeetCode75.Dynamic_Programming;
+using HackerRankChalenges.Challanges.LeetCode75.Graph;
 using HackerRankChalenges.Challanges.LeetCodeAlgo1;
 using HackerRankChalenges.Challanges.Problem_Solving;
 using HackerRankChalenges.Challanges.Strings;
@@ -36,6 +37,13 @@ namespace HackerRankChalenges
         {
 
             InitializeComponent();
+            this.ChalengeList.Items.Add(new LeetCloneGraph());
+            this.ChalengeList.Items.Add(new LeetCoinChange());
+            this.ChalengeList.Items.Add(new LeetFirstBadVersion());
+            this.ChalengeList.Items.Add(new LeetSortedSquares());
+            this.ChalengeList.Items.Add(new LeetRotateArray());
+            this.ChalengeList.Items.Add(new LeetTwoSum());
+            
             this.ChalengeList.Items.Add(new TwoCharacters());
             this.ChalengeList.Items.Add(new FibonacciNumbers());
             this.ChalengeList.Items.Add(new DavisStairCase());
@@ -52,11 +60,7 @@ namespace HackerRankChalenges
             this.ChalengeList.Items.Add(new AmazonSession1Q1());
             this.ChalengeList.Items.Add(new AmazonSession1Q2());
             this.ChalengeList.Items.Add(new BinarySearch());
-            this.ChalengeList.Items.Add(new LeetFirstBadVersion());
-            this.ChalengeList.Items.Add(new LeetSortedSquares());
-            this.ChalengeList.Items.Add(new LeetRotateArray());
-            this.ChalengeList.Items.Add(new LeetTwoSum());
-            this.ChalengeList.Items.Add(new LeetCoinChange());
+            
             
 
 
