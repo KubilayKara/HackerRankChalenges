@@ -7,134 +7,60 @@ namespace HackerRankChalenges.Challanges.Amazon
     {
         public override void SetParameters()
         {
-            this.ChalangeParameters = new List<ChalengeParameter> { new ChalengeParameter("list", "2,0,1") };
+            this.ChalangeParameters = new List<ChalengeParameter> { new ChalengeParameter("packets", "1,2,3,4,5,6,7"),
+            new ChalengeParameter("chanel", "4")};
 
             base.SetParameters();
         }
         public override string Run(string[] parameters)
         {
 
-            var list = Utility.StringToIntagerList(parameters[0]);
+            var packets = Utility.StringToIntagerList(parameters[0]);
+            var chanels = int.Parse(parameters[1]);
 
-            return getMexCount(list).ToString();
+            return maximumQuality(packets, chanels).ToString();
         }
 
 
-        public static List<long> getMexCount(List<int> arr)
+        public static long maximumQuality(List<int> packets, int chanels)
         {
-            //for
-            long[] result = new long[arr.Count + 1];
-            for (int i = 0; i < arr.Count; i++)
-            {
-                if (arr[i] > 0)
-                    result[0]++;
-                else
-                    result[1]++;
-
-                bool[] tmp = new bool[arr.Count];
-                tmp[arr[i]] = true;
-
-                for (int j = 1; i + j < arr.Count; j++)
-                {
-                    int curr = arr[i + j];
-                    tmp[curr] = true;
-                    bool found = false;
-                    for (int t = 0; t < tmp.Length; t++)
-                    {
-                        if (!tmp[t])
-                        {
-                            result[t]++;
-                            found = true;
-                            break;
-                        }
-                    }
-                    if (!found)
-                        result[result.Length - 1]++;
-                }
-            }
-            return new List<long>(result);
-
+            return Convert.ToInt64(Math.Round(maximumQuality(packets, chanels, 0, packets.Count - 1)));
         }
 
-        /* 4, 0, 2, 1, 3
-        4
-        4, 0
-        4, 0, 2
-        4, 0, 2, 1
-        4, 0, 2, 1, 3
-        0
-        0, 2,
-        0, 2, 1
-        0, 2, 1, 3
-        */
-        private static int GetMex(List<int> arr)
+
+        public static double maximumQuality(List<int> list, int ch, int start, int end)
         {
-            int cur = 0;
-            while (true)
+            int length = end - start + 1;
+
+            list.Sort();
+
+            if (ch == 1)
             {
-                if (!arr.Contains(cur))
-                    return cur;
-                cur++;
+                return CalculateMedium(list, start, end);
             }
 
+            // n-ch+1 (not adding 1 because index is zero based)
+            int traverseTill = (length - ch);
+
+            double curMedian = CalculateMedium(list, 0, traverseTill);
+
+            while (++traverseTill < length)
+            {
+                curMedian += list[traverseTill];
+            }
+            return curMedian;
         }
 
-        //static void maxMEX(int[] arr, int N, int K)
-        //{
-        //    // Stores element from
-        //    // 1 to N + 1 is nor
-        //    // present in subarray
-        //    HashSet<int> s = new HashSet<int>();
+        private static double CalculateMedium(List<int> list, int start, int end)
+        {
+            int length = end - start + 1;
+            int mid = (start + end) / 2;
 
-        //    // Store number 1 to
-        //    // N + 1 in set s
-        //    for (int i = 1; i <= N + 1; i++)
-        //        s.Add(i);
-
-        //    // Find the MEX of K length
-        //    // subarray starting from index 0
-        //    for (int i = 0; i < K; i++)
-        //        s.Remove(arr[i]);
-
-        //    List<int> v = new List<int>();
-        //    foreach (int i in s) { v.Add(i); }
-        //    int mex = v[0];
-
-        //    // Find the MEX of all subarray of
-        //    // length K by erasing arr[i]
-        //    // and inserting arr[i-K]
-        //    for (int i = K; i < N; i++)
-        //    {
-        //        v.Remove(arr[i]);
-        //        v.Add(arr[i - K]);
-
-        //        // Store first element
-        //        // of set
-        //        int firstElem = v[0];
-
-        //        // Updating mex
-        //        mex = Math.Max(mex, firstElem);
-        //    }
-
-        //    // Print maximum MEX of all K
-        //    // length subarray
-        //    Console.Write(mex - 2 + " ");
-        //}
-
-        //// Driver Code
-        //public static void Main(String[] args)
-        //{
-        //    // Given array
-        //    int[] arr = { 3, 2, 1, 4 };
-
-        //    // Given length of subarray
-        //    int K = 2;
-
-        //    // Size of the array
-        //    int N = arr.Length;
-
-        //    // Function Call
-        //    maxMEX(arr, N, K);
-        //}
+            if (length % 2 == 0)
+            {
+                return ((double)list[mid] + list[mid + 1]) / 2;
+            }
+            return list[mid];
+        }
     }
 }
