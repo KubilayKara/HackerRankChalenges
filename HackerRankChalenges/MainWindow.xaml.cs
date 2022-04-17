@@ -38,6 +38,10 @@ namespace HackerRankChalenges
         {
 
             InitializeComponent();
+            this.ChalengeList.Items.Add(new AS2Q1());
+            this.ChalengeList.Items.Add(new AS2Q2());
+            this.ChalengeList.Items.Add(new AS1Q1());
+            this.ChalengeList.Items.Add(new AS1Q2());
             this.ChalengeList.Items.Add(new LeetSumOfTwoIntagers());
             this.ChalengeList.Items.Add(new LeetCloneGraph());
             this.ChalengeList.Items.Add(new LeetCoinChange());
@@ -54,13 +58,13 @@ namespace HackerRankChalenges
             this.ChalengeList.Items.Add(new DivisibleSumPairs());
             this.ChalengeList.Items.Add(new ExtraLongFactorials());
             this.ChalengeList.Items.Add(new FormingMagicSquare());
-            this.ChalengeList.Items.Add(new Siemens());
+            this.ChalengeList.Items.Add(new Sms());
             this.ChalengeList.Items.Add(new PicingNumbers());
             this.ChalengeList.Items.Add(new TwoSum());
             this.ChalengeList.Items.Add(new ProductExceptSelf());
             this.ChalengeList.Items.Add(new MaxSubArray());
-            this.ChalengeList.Items.Add(new AmazonSession1Q1());
-            this.ChalengeList.Items.Add(new AmazonSession1Q2());
+            this.ChalengeList.Items.Add(new AS1Q1());
+            this.ChalengeList.Items.Add(new AS1Q2());
             this.ChalengeList.Items.Add(new BinarySearch());
             
             

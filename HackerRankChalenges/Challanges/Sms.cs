@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HackerRankChalenges.Challanges
 {
     
-    public partial class Siemens : Chalange
+    public partial class Sms : Chalange
     {
         public override void SetParameters()
         {
@@ -15,7 +15,7 @@ namespace HackerRankChalenges.Challanges
             this.ChalangeParameters = new List<ChalengeParameter> { new ChalengeParameter { Label = "N", DefaultValue = "4" },          
             new ChalengeParameter { Label = "A", DefaultValue = "1,2,4,4,3" },
             new ChalengeParameter { Label = "B", DefaultValue = "2,3,1,3,1" }};
-            this.ButtonText = typeof(Siemens).Name;
+            this.ButtonText = typeof(Sms).Name;
         }
         public override string Run(string[] parameters)
         {
