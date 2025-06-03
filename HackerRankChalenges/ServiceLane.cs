@@ -23,7 +23,8 @@ namespace HackerRankChalenges
             var packets = Utility.StringToIntagerList(parameters[0]);
             var chanels = int.Parse(parameters[1]);
 
-            return serviceLane(packets, chanels).ToString();
+            return null;
+           // return serviceLane(packets, chanels).ToString();
         }
 
         /*

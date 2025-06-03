@@ -56,6 +56,7 @@ namespace HackerRankChalenges
             this.ChalengeList.Items.Add(new CrossWordPuzzle());
             this.ChalengeList.Items.Add(new ProblemSolving_Intermediate());
             this.ChalengeList.Items.Add(new DivisibleSumPairs());
+            this.ChalengeList.Items.Add(new MigratoryBirds());
             this.ChalengeList.Items.Add(new ExtraLongFactorials());
             this.ChalengeList.Items.Add(new FormingMagicSquare());
             this.ChalengeList.Items.Add(new Sms());
@@ -73,7 +74,7 @@ namespace HackerRankChalenges
 
 
 
-            //CrackingTheCoreInterViewList
+            //CrackingTheCoreInterViewList 
             this.CrackingTheCoreInterViewList.Items.Add(new IsUnique());
             this.CrackingTheCoreInterViewList.Items.Add(new CheckPermutation());
             this.CrackingTheCoreInterViewList.Items.Add(new URLify());
